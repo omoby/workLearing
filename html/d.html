@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>d</title>
+	<script type="text/javascript">
+		function jump(){  
+	    //经测试：window.location.href与location.href,self.location.href,location.href都是本页面跳转  
+	    //作用一样  
+	    //window.location.href="http://www.baidu.com";  
+	    location.href="http://www.baidu.com";  
+	    //self.location.href="http://www.baidu.com";  
+	    //this.location.href="http://www.baidu.com";  
+	    //location.href="http://www.baidu.com";  
+}
+	</script>
+</head>
+<body>
+	<span>这是d.html：</span><span id="span1"></span><br />  
+	<input type='button' onclick='jump();' value='跳转'>  
+	<iframe  width="500px" height="100%"></iframe>
+</body>
+</html>
