@@ -16,6 +16,7 @@ import java.nio.Buffer;
  * public String(char[] value):将字符数组转换成字符串
  * public String(char[] value,int offset,int count):将字符数组的一部分转换成字符串
  * public String(String original):将一个常量转换字符串:String 是不可变的，所以无需使用此构造方法
+ * 以及字符串中的常用方法
  */
 
 public class LearnStringCollection {
