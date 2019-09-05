@@ -1,14 +1,12 @@
 package javacollection;
 
 
-import java.nio.Buffer;
-
 /**
  * @ClassName LearnStringCollection
  * @Author zhangqx02
  * @Date 2019/9/4 14:28
  * @Description
- * 将String类作为结合的一部分，系统的学习字符串各种操作
+ * 将String类作为集合的一部分，系统的学习字符串各种操作
  * String常用构造方法
  * public String():无参构造
  * public String(byte[] bytes):将字节数组转换成字符串
