@@ -174,9 +174,10 @@ public class LearnArrayList {
         int size1 = list.size();
         System.out.println("call trimToSize,size: "+ size1);
 
+        System.out.println("list: "+ list.toString());
+        System.out.println("list1: "+ list1.toString());
+
+
 
     }
-    /**
-     *
-     */
 }
