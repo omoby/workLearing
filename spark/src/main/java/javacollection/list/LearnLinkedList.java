@@ -193,7 +193,7 @@ public class LearnLinkedList {
         while (iter.hasNext()){
             String str = (String)iter.next();
             System.out.println("str: "+ str);
-            if (str.equals("Hive")){
+            if ("Hive".equals(str)){
                 iter.remove();
             }
         }
@@ -248,8 +248,9 @@ public class LearnLinkedList {
     }
 
     private static LinkedList getLinkedList(){
+        int range = 100000;
         LinkedList<Integer> list = new LinkedList();
-        for(int i = 0; i < 100000;i++){
+        for(int i = 0; i < range;i++){
             list.add(i);
         }
         return list;
@@ -329,8 +330,9 @@ public class LearnLinkedList {
 
         // 记录开始时间
         long start = System.currentTimeMillis();
-        while(list.pollFirst() != null)
-            ;
+        while(list.pollFirst() != null){
+
+        }
 
         // 记录结束时间
         long end = System.currentTimeMillis();

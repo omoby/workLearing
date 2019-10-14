@@ -1,4 +1,4 @@
-package javacollection;
+package javacollection.string;
 
 
 /**

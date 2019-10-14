@@ -40,7 +40,7 @@ object InchesToCentimeters extends UtilConversion{
   }
 }
 
-object Test{
+object test{
   def main (args: Array[String] ): Unit = {
     val inches = 10
     val gallons = 10
