@@ -52,6 +52,14 @@
         }
 
         function posNumberPattern() {
+            /**
+             * 如果我我们进行明确的规定：
+             * 1.如果出现小数点，小数点前后必须有数字
+             * 2.大于1的数不能以0开头
+             * 3.小于1的数字只能以一个0开头
+             * 4.0有两种表示方法，带小数点和不带小数点
+             * /^(0|[1-9])+(\.\d+)?$/
+             */
             var pnPattern = /^\d+\.?\d+$/;
             var posNumber = document.getElementById("posNumber").value;
             var pnTest = pnPattern.test(posNumber);
@@ -76,7 +84,7 @@
         }
 
         function emailPattern() {
-            var emailPattern =/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+            var emailPattern =/^([-A-Za-z0-9_.]+)@([-A-Za-z0-9_.]+)\.([A-Za-z]{2,4})$/;
             var email= document.getElementById("email").value;
             var emTest = emailPattern.test(email);
             var emp = document.getElementById("emailResult");
