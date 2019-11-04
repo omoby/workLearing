@@ -10,6 +10,9 @@
 <head>
     <title>15个常用JavaScript正则表达式</title>
     <script type="text/javascript">
+        /**
+         * 用户名正则，4到16位（字母，数字，下划线，减号）
+         */
         function userNamePattern() {
             var uPattern =/^[a-zA-Z0-9_-]{4,16}$/;
             var userName = document.getElementById("userName").value;
@@ -17,7 +20,9 @@
             var up = document.getElementById("userNameResult");
             up.innerHTML = uTest;
         }
-
+        /**
+         * 密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+         */
         function passWordPattern() {
             var pwPattern = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
             var passWord = document.getElementById("passWord").value;
@@ -27,6 +32,9 @@
 
         }
 
+        /**
+         * 正整数正则
+         */
         function positiveNumberPattern() {
             var pnPattern = /^\d+$/;
             var positiveNumber = document.getElementById("positiveNumber").value;
@@ -34,7 +42,9 @@
             var pnp = document.getElementById("positiveNumberResult");
             pnp.innerHTML = pnTest;
         }
-
+        /**
+         * 负整数正则
+         */
         function negtiveNumberPattern() {
             var nnPattern = /^-\d+$/;
             var negtiveNumber = document.getElementById("negtiveNumber").value;
@@ -43,6 +53,9 @@
             nnp.innerHTML = nnTest;
         }
 
+        /**
+         * 整数正则
+         */
         function integerNumberPattern() {
             var inPattern = /^-?\d+$/;
             var integerNumber = document.getElementById("integerNumber").value;
@@ -51,6 +64,9 @@
             inp.innerHTML = inTest;
         }
 
+        /**
+         * 正数正则
+         */
         function posNumberPattern() {
             /**
              * 如果我我们进行明确的规定：
@@ -67,6 +83,9 @@
             pnp.innerHTML = pnTest;
         }
 
+        /**
+         * 负数正则
+         */
         function negNumberPattern() {
             var nnPattern = /^-\d+\.?\d+$/;
             var negNumber = document.getElementById("negNumber").value;
@@ -74,7 +93,9 @@
             var nnp = document.getElementById("negNumberResult");
             nnp.innerHTML = nnTest;
         }
-
+        /**
+         * 数字正则
+         */
         function numberPattern() {
             var inPattern = /^-?\d+\.?\d+$/;
             var number = document.getElementById("number").value;
@@ -83,6 +104,9 @@
             inp.innerHTML = inTest;
         }
 
+        /**
+         * Email正则
+         */
         function emailPattern() {
             var emailPattern =/^([-A-Za-z0-9_.]+)@([-A-Za-z0-9_.]+)\.([A-Za-z]{2,4})$/;
             var email= document.getElementById("email").value;
@@ -90,7 +114,9 @@
             var emp = document.getElementById("emailResult");
             emp.innerHTML = emTest;
         }
-
+        /**
+         * 手机号正则
+         */
         function phoneNumberPattern() {
             var pmPattern =/^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
             var phoneNumber= document.getElementById("phoneNumber").value;
@@ -98,6 +124,9 @@
             var pmp = document.getElementById("phoneNumberResult");
             pmp.innerHTML = pmTest;
         }
+        /**
+         * 身份证号正则
+         */
         function IDCardPattern() {
             /**
              * 1. "^[1-9](\\d{5})"：这个正则表示了身份证号的前6位。身份证号码没有0开头的，所以第一位数字匹配1~9，后五位匹配5个数字即可
@@ -120,14 +149,20 @@
             IDCp.innerHTML = IDCTest;
         }
 
+        /**
+         * URL正则
+         */
         function URLPattern() {
-            var URLPattern =/^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+            var URLPattern =/^((https?|ftp|file):\/\/)?([-\da-z.]+)\.([a-z.]{2,6})([-\/\w .]*)*\/?$/;
             var URL= document.getElementById("URL").value;
             var URLTest = URLPattern.test(URL);
             var URLp = document.getElementById("URLResult");
             URLp.innerHTML = URLTest;
         }
 
+        /**
+         * IPv4地址正则
+         */
         function IPv4Pattern() {
             /**
              * IPV4地址由4个组数字组成，每组数字之间以.分隔，每组数字的取值范围是0-255。
@@ -145,6 +180,9 @@
             IPv4p.innerHTML = IPv4Test;
         }
 
+        /**
+         * 十六进制颜色正则
+         */
         function RGBHexPattern() {
             var RGBHexPattern =/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/;
             var RGBHex= document.getElementById("RGBHex").value;
@@ -153,6 +191,9 @@
             RGBHexp.innerHTML = RGBHexTest;
         }
 
+        /**
+         * 日期正则，简单判定,未做月份及日期的判定
+         */
         function date1Pattern() {
             var date1Pattern =/^\d{4}(-)\d{1,2}(-)\d{1,2}$/;
             var date1= document.getElementById("date1").value;
@@ -160,6 +201,9 @@
             var date1p = document.getElementById("date1Result");
             date1p.innerHTML = date1Test;
         }
+        /**
+         * 日期正则，复杂判定
+         */
         function date2Pattern() {
             var date2Pattern =/^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/;
             var date2= document.getElementById("date2").value;
@@ -167,6 +211,10 @@
             var date2p = document.getElementById("date2Result");
             date2p.innerHTML = date2Test;
         }
+
+        /**
+         * QQ号正则，5至11位
+         */
         function QQPattern() {
             var QQPattern =/^[1-9]\d{4,10}/;
             var QQ = document.getElementById("QQ").value;
@@ -176,6 +224,9 @@
         }
 
 
+        /**
+         * 微信号正则，6至20位，以字母开头，字母，数字，减号，下划线
+         */
         function wxPattern() {
             /**
              * 微信号正则，6至20位，以字母开头，字母，数字，减号，下划线
@@ -189,6 +240,9 @@
             wxp.innerHTML = wxTest;
         }
 
+        /**
+         *车牌号正则
+         */
         function carCardPattern() {
             var carCardPattern =/^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/;
             var carCard = document.getElementById("carCard").value;
@@ -197,6 +251,9 @@
             carCardp.innerHTML = carCardTest;
         }
 
+        /**
+         * 包含中文正则
+         */
         function chinesePattern() {
             var chinesePattern =/[\u4E00-\u9FA5]/;
             var chinese = document.getElementById("chinese").value;
