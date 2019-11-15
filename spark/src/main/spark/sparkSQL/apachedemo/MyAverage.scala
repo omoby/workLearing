@@ -61,11 +61,11 @@ object MyAverage extends UserDefinedAggregateFunction{
       .getOrCreate()
     //／需要特别注意的是，若是想在 sql 语句中使用用户自定义函数，必须先将函数进行注册
     spark.udf.register("myAverage",MyAverage)
-    val filePath = "file:/usr/local/spark/examples/src/main/resourses/employees.json"
+    val filePath = "file:/usr/local/spark/examples/src/main/resources/employees.json"
     val df = spark.read.json(filePath)
     df.createOrReplaceTempView("employees")
     df.show()
-    val results = spark.sql("SELECT myAverage(salary) AS average_salary FROM people")
+    val results = spark.sql("SELECT myAverage(salary) AS average_salary FROM employees")
     results.show()
 
   }

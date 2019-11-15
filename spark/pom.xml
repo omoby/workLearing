@@ -15,10 +15,11 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <spark.version>2.2.0</spark.version>
-    <!--<spark.version>2.3.1</spark.version>-->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+<!--    <spark.version>2.2.0</spark.version>-->
+    <spark.version>2.3.1</spark.version>
+<!--    <scala.version>2.11</scala.version>-->
     <scala.version>2.11</scala.version>
     <hadoop.version>2.9.2</hadoop.version>
   </properties>
@@ -57,11 +58,11 @@
       <artifactId>spark-mllib_${scala.version}</artifactId>
       <version>${spark.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.spark</groupId>
-      <artifactId>spark-examples_${scala.version}</artifactId>
-      <version>${spark.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.spark</groupId>-->
+<!--      <artifactId>spark-examples_${scala.version}</artifactId>-->
+<!--      <version>${spark.version}</version>-->
+<!--    </dependency>-->
     <!--添加snappy-java的jar包，解决java.lang.UnsatisfiedLinkError: no snappyjava in java.library.path的报错问题-->
     <dependency>
       <groupId>org.xerial.snappy</groupId>
@@ -93,21 +94,21 @@
       <artifactId>hadoop-mapreduce</artifactId>
       <version>${hadoop.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.hadoop</groupId>
-      <artifactId>hadoop-kafka</artifactId>
-      <version>${hadoop.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.hadoop</groupId>-->
+<!--      <artifactId>hadoop-kafka</artifactId>-->
+<!--      <version>${hadoop.version}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-streaming</artifactId>
       <version>${hadoop.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.hadoop</groupId>
-      <artifactId>hadoop-client-modules</artifactId>
-      <version>${hadoop.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.hadoop</groupId>-->
+<!--      <artifactId>hadoop-client-modules</artifactId>-->
+<!--      <version>${hadoop.version}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-resourceestimator</artifactId>
@@ -163,5 +164,15 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>

@@ -24,7 +24,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object SpecificSchema {
   def main(args: Array[String]): Unit = {
-    val ip = "spark://10.180.220.176:8080"
+    val ip = "spark://Master:7077"
     val conf = new SparkConf()
       .setAppName("SpecificSchema")
       .setMaster(ip)
