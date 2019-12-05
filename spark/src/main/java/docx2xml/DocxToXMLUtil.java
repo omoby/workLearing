@@ -38,6 +38,11 @@ public class DocxToXMLUtil {
         }
     }
 
+    /**
+     * 转换docx为xml
+     * @param in
+     * @param author
+     */
     private static void docx2xml( FileInputStream in,String author){
         XWPFDocument document = null;
         try {
@@ -135,15 +140,25 @@ public class DocxToXMLUtil {
             }
             String xmlString = tablexml.toString()+endTable+"\n\n\n\n";
             testPrint("xmlString", xmlString);
-            saveXml(xmlString);
+            saveData2Xml(xmlString);
         }
 
 //        testPrint("tableList",tableList.toString());
     }
+
+    /**
+     * 转换doc为xml
+     * @param in
+     */
     private static void doc2xml(FileInputStream in){
 
     }
 
+    /**
+     * 打印测试数据
+     * @param message
+     * @param out
+     */
     private static void testPrint(String message,String out){
         System.out.println(message+" : "+out);
     }
@@ -151,7 +166,12 @@ public class DocxToXMLUtil {
         SimpleDateFormat df = new SimpleDateFormat("yyyy.MM.dd");
         return df.format(new Date());
     }
-    private static void saveXml(String data){
+
+    /**
+     * 将转换后的数据格式保存到指定的文件中
+     * @param data
+     */
+    private static void saveData2Xml(String data){
         String saveXmlPath = "D:\\MyFile\\workLearning\\spark\\src\\files\\docx2xml.xml";
         try {
             FileWriter fw = new FileWriter(saveXmlPath, true);

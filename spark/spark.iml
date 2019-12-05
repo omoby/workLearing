@@ -25,7 +25,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="scala-sdk-2.11.8" level="application" />
-    <orderEntry type="library" name="Maven: org.apache.spark:spark-examples_2.11:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-core_2.11:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.avro:avro:1.7.7" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.paranamer:paranamer:2.3" level="project" />
@@ -253,7 +252,6 @@
     <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-servlet:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.hsqldb:hsqldb:2.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-streaming:2.9.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-client-modules:2.9.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-resourceestimator:2.9.2" level="project" />
     <orderEntry type="library" name="Maven: org.ojalgo:ojalgo:43.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-yarn-common:2.9.2" level="project" />
@@ -277,7 +275,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/jconsole.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_112/lib/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -286,11 +284,17 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
-          <root url="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/tools.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_112/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml:3.14" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi:3.14" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-schemas:3.14" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:2.6.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.03" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-scratchpad:3.14" level="project" />
   </component>
 </module>
