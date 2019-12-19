@@ -11,9 +11,9 @@ package docx2xml;
 
 public class Docx2XMLUtilTest {
     //docx文件所在文件路径
-    private static final String docxFilePath = "D:\\MyFile\\workLearning\\spark\\src\\files\\docx2xml2.docx";
+    private static final String docxFilePath = "D:\\MyFile\\workLearning\\spark\\src\\files\\docx2xml3.docx";
     //生成的xml文件保存路径
-    private static final String xmlFileSavePath = "D:\\MyFile\\workLearning\\spark\\src\\files\\docx2xml2.xml";
+    private static final String xmlFileSavePath = "D:\\MyFile\\workLearning\\spark\\src\\files\\docx2xml3.xml";
     //表格录入人
     private static final String author = "zhangqx02";
     public static void main(String[] args){
