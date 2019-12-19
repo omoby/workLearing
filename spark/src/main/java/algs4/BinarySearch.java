@@ -67,7 +67,6 @@ public class BinarySearch {
     public static int rank(int[] arr,int key){
         int start = 0;
         int end = arr.length-1;
-        int result = 0;
         while (start <= end){
             int mid = start + (start + end) / 2;
             if (key == arr[mid]){
