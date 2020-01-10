@@ -1,6 +1,8 @@
 package algs4;
 
 
+
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -71,7 +73,7 @@ public class BinarySearch {
      * @param key
      * @return
      */
-    public static int rank(int[] arr,int key){
+    private static int rank(int[] arr,int key){
         int start = 0;
         int end = arr.length-1;
         while (start <= end){
@@ -97,7 +99,7 @@ public class BinarySearch {
         return rank(key,arr,0,arr.length-1);
     }
 
-    public static int rank(int key,int[] arr,int low,int hight){
+    private static int rank(int key,int[] arr,int low,int hight){
         int mid = low + (hight - low) / 2;
         if (key < arr[mid]){
             return rank(key,arr,low,mid-1);
